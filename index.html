@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketchfab Model Viewer</title>
+  <style>
+    /* Basic styling for the page */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Styling for the Sketchfab model viewer */
+    .sketchfab-embed-wrapper {
+      width: 80%;
+      height: 80%;
+      max-width: 1200px;
+      max-height: 800px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Styling for the model's credit section */
+    .credit {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .credit a {
+      color: #1CAAD9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Embed Sketchfab Model -->
+    <div class="sketchfab-embed-wrapper">
+      <iframe 
+        title="Mazda RX-7 FD3S 'Abflug'" 
+        src="https://sketchfab.com/models/37c4551451c342ada3d8593956e23f35/embed" 
+        frameborder="0" 
+        allowfullscreen 
+        mozallowfullscreen="true" 
+        webkitallowfullscreen="true" 
+        allow="autoplay; fullscreen; xr-spatial-tracking" 
+        xr-spatial-tracking 
+        execution-while-out-of-viewport 
+        execution-while-not-rendered 
+        web-share>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Credit Section -->
+  <div class="credit">
+    <p>
+      <a href="https://sketchfab.com/3d-models/mazda-rx-7-fd3s-abflug-37c4551451c342ada3d8593956e23f35?utm_medium=embed&utm_campaign=share-popup&utm_content=37c4551451c342ada3d8593956e23f35" target="_blank" rel="nofollow">
+        Mazda RX-7 FD3S 'Abflug'
+      </a> by 
+      <a href="https://sketchfab.com/Wekfest23?utm_medium=embed&utm_campaign=share-popup&utm_content=37c4551451c342ada3d8593956e23f35" target="_blank" rel="nofollow">
+        PanelSage™
+      </a> on 
+      <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=37c4551451c342ada3d8593956e23f35" target="_blank" rel="nofollow">
+        Sketchfab
+      </a>
+    </p>
+  </div>
+
+  <script>
+    // Example of using JavaScript to dynamically change the model in the iframe
+    // You can replace the iframe src with a different Sketchfab model URL dynamically
+
+    function changeModel(modelId) {
+      const iframe = document.querySelector("iframe");
+      iframe.src = `https://sketchfab.com/models/${modelId}/embed`;
+    }
+
+    // Example: Change model after 5 seconds
+    setTimeout(() => {
+      changeModel("newModelIdHere"); // Replace with a new model ID
+    }, 5000);
+  </script>
+
+</body>
+</html>
